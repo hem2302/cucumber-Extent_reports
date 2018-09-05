@@ -11,7 +11,7 @@ import utils.SeleniumMethods;
 @CucumberOptions (features = {"src/test/java/features"},
 					glue = {"steps"},
 					monochrome = true,
-					tags = {"@LoginEngTest"}
+					tags = {"@LoginEngTest,@LoginArabicTest"}
 					)
 @RunWith(Cucumber.class)
 

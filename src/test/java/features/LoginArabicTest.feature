@@ -1,12 +1,12 @@
-@LoginEngTest
-Feature: Tameeni insurance Login Validation - English
- I want to validate the login scenarios in Tameeni insurance booking website in english language
+@LoginArabicTest
+Feature: Tameeni insurance Login Validation - Arabic
+ I want to validate the login scenarios in Tameeni insurance booking website in Arabic language
 
-@LoginWithCorrectUsernameAndPasswordEnglish
+@LoginWithCorrectUsernameAndPasswordArabic
 Scenario Outline: Validate if login is successful using correct username and password
 Given I launch the <browser>
 And I pass the <URL>
-And I click on EN and verify it is translated
+And I verify it is in Arabic
 And I click on login
 When I enter <uname> and <password>
 And I click on login button
@@ -16,11 +16,11 @@ Examples:
 | chrome |http://policyuat.gettameeni.com/#comprehensive-insurance|abbasbriskst.ar@gmail.com	| 123456 |
 
 
-@LoginAndLogoutEnglish
+@LoginAndLogoutArabic
 Scenario Outline: Validate if user is able to login and logout
 Given I launch the <browser>
 And I pass the <URL>
-And I click on EN and verify it is translated
+And I verify it is in Arabic
 And I click on login
 And I enter <uname> and <password>
 And I click on login button
