@@ -47,7 +47,7 @@ public class SeleniumMethods extends Reporter{
 		}
 	}
 	
-	public void passURL(String URL) {
+	public void passUrl(String URL) {
 		try {
 			driver.get(URL);
 			reportStep(URL+", url successfully loaded", "PASS");
@@ -85,9 +85,9 @@ public class SeleniumMethods extends Reporter{
 			ele.clear();
 			ele.sendKeys(data);
 			String x = ""+ele;
-			reportStep("The data: "+data+" entered successfully in the field :"+ele, "PASS");
+			reportStep("The data: "+data+" entered successfully in the field :"+ele, "PASS",false);
 		} catch (InvalidElementStateException e) {
-			reportStep("The data: "+data+" could not be entered in the field :"+ele,"FAIL");
+			reportStep("The data: "+data+" could not be entered in the field :"+ele,"FAIL",true);
 		} catch (WebDriverException e) {
 			reportStep("Unknown exception occured while entering "+data+" in the field :"+ele, "FAIL");
 		}

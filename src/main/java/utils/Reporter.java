@@ -47,6 +47,11 @@ public abstract class Reporter {
 
 
 	public void reportStep(String desc, String status, boolean bSnap)  {
+		
+		if(status.equalsIgnoreCase("PASS"))
+		{
+			bSnap = false;
+		}
 
 		MediaEntityModelProvider img = null;
 		if(bSnap && !status.equalsIgnoreCase("INFO")){
